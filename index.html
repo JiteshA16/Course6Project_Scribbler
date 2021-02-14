@@ -2,12 +2,91 @@
 <html>
 
 <head>
-    <!-- TODO: Include Font Awesome file here -->
-    <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- TODO: Include all your code for the header and home page here -->
+    <div class="common-header">
+        <button class="header-buttons" onclick="showSignInModal()">Sign In</button>
+        <button class="header-buttons" onclick="showSignUpModal()">Sign Up</button>
+
+        <span class="heading">ScriBBler</span>
+        <p class="subheading">Explore, Imagine, Create</p>
+    </div>
+
+    <div class="center-container">
+        <button class="post-buttons" onclick="navigateToPostList()">All Posts</button>
+        <button class="post-buttons" onclick="showCreatePostModal()">Create Post</button>
+    </div>
+
+    <div id="signup-modal" class="modal-background">
+        <form class="modal-form">
+            <div class="modal-container">
+                <div class="form-header">
+                    <label class="form-title">Get Started</label>
+                    <i class="fa fa-times" aria-hidden="true" onclick="document.getElementById('signup-modal').style.display = 'none'" style="margin-top: 0px; padding: 1.5%; font-size: 25px; color: darkgray; cursor: pointer;"></i>
+                </div>
+                <div class="form-seperator"></div>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required/>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required/>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required/>
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" required/>
+                <button class="modalform-button">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="signin-modal" class="modal-background">
+        <form class="modal-form">
+            <div class="modal-container">
+                <div class="form-header">
+                    <label class="form-title">Welcome Back!</label>
+                    <i class="fa fa-times" aria-hidden="true" onclick="document.getElementById('signin-modal').style.display = 'none'" style="margin-top: 0px; padding: 1.5%; font-size: 25px; color: darkgray; cursor: pointer;"></i>
+                </div>
+                <div class="form-seperator"></div>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required/>
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required/>
+                <button class="modalform-button">Sign In</button>
+                <p style="font-size: 15px; font-weight: 100px; font-family: sans-serif; text-align: center; ">Not a member ? <a onclick="navigateToSignUp()" style="color: blue; cursor: pointer;">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div id="createpost-modal" class="modal-background">
+        <form class="post-form">
+            <div class="modal-container">
+                <div class="form-header">
+                    <label class="form-title">Pen Your Post</label>
+                    <i class="fa fa-times" onclick="document.getElementById('createpost-modal').style.display = 'none'" aria-hidden="true" style="margin-top: 0px; padding: 1.5%; font-size: 25px; color: darkgray; cursor: pointer;"></i>
+                </div>
+                <div class="form-seperator"></div>
+                <label>Title</label>
+                <input type="text" placeholder="Enter title of your post" required/>
+                <label>Contents</label>
+                <textarea name="" id="" cols="40" rows="10" placeholder="Enter the contents of your post" required></textarea>
+                <div style="width: 100%; display: flex; justify-content: center;">
+                    <button class="createpost-button">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/common.js"></script>
 </body>
 
 </html>
