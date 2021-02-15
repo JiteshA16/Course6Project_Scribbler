@@ -5,5 +5,5 @@ function showCreatePostModal() {
 }
 
 function navigateToPostList() {
-    window.location.href = './html/postslist.html';
+    location.replace('./html/postslist.html');
 }

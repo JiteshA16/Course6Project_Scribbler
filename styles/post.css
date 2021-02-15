@@ -1,0 +1,120 @@
+.post-view {
+    width: 100%;
+    height: auto;
+}
+
+#post-title-view {
+    border: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+#post-title {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.author-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+#edit-button {
+    width: auto;
+    float: right;
+    padding: auto;
+    color: white;
+    background-color: rgba(243, 33, 83, 1.0);
+    box-shadow: 0px 5px 5px 0px rgba(252, 188, 201, 1.0);
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    padding: 10px 10px;
+}
+
+#post-description {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px;
+    border-color: white;
+    border-style: solid;
+}
+
+#updated-label {
+    display: none;
+}
+
+#like-button {
+    width: auto;
+    float: left;
+    padding: auto;
+    color: white;
+    background-color: rgba(243, 33, 83, 1.0);
+    box-shadow: 0px 5px 5px 0px rgba(252, 188, 201, 1.0);
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    padding: 10px 10px;
+}
+
+.likecount-label {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.comment-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#user-comments {
+    width: 50%;
+}
+
+#comment-button {
+    width: auto;
+    float: left;
+    padding: auto;
+    color: white;
+    background-color: rgba(243, 33, 83, 1.0);
+    box-shadow: 0px 5px 5px 0px rgba(252, 188, 201, 1.0);
+    border: none;
+    cursor: pointer;
+    width: 7%;
+    padding: 10px 10px;
+}
+
+.outercomment-view {
+    background-color: rgba(226, 228, 239, 1.0);
+    width: 50%;
+    padding: 15px 8px 15px 8px;
+}
+
+.innercomment-view {
+    background-color: white;
+    padding: 15px;
+    color: black;
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+    #edit-button,
+    #like-button,
+    #comment-button {
+        width: 30%;
+    }
+    .outercomment-view {
+        width: 80%;
+    }
+    #user-comments {
+        width: 80%;
+    }
+}

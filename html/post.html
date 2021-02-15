@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- TODO: Include Font Awesome file here -->
+    <!-- TODO: Include Google Fonts file here -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="stylesheet" href="../styles/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/efd7ce0474.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- TODO: Include code for header here -->
+    <div class="common-header">
+        <button class="header-buttons" onclick="showSignInModal()">Sign In</button>
+        <button class="header-buttons" onclick="showSignUpModal()">Sign Up</button>
+
+        <span class="heading">ScriBBler</span>
+        <p class="subheading">Explore, Imagine, Create</p>
+    </div>
+
+    <!--Creating a post view-->
+    <div class="post-view">
+        <div id="post-title-view">
+            <h3 style="border: 0px;" id="post-title"><span id="updated-label">Updated : </span>Everything you need to know about me.</h3>
+        </div>
+
+        <div class="author-view" style="padding: 0px 10px 0px 10px;">
+            <p style="font-family: 'Ubuntu Mono', monospace; font-size: 18px;">Jitesh Acharya</p>
+            <button type="button" id="edit-button" style="font-size: 15px;" onclick="onTapEditButton()">Edit
+                <i style="margin-left: 10px;" class="fa fa-edit" id="icon"></i>
+            </button>
+        </div>
+
+        <p id="post-description">
+            <span id="updated-label">Updated!<br><br></span> Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some code and this file is named xyz.js, then this file is treated as a module in Node,
+            and you can say that you've created a module named xyz. Let's take an example to understand this better. You have a file named circle.js which consists of the logic for calculating the area & the circumference of a circle of a given radius.
+            You can call circle.js file a module named circle. You might be wondering why is there a need to have multiple modules? You could have just written all the code in a single module. Well, it is very important to write modular code. By modular,
+            I mean to say that your code should be independent and should be loosely coupled. Imagine that there's a large application and you have all your code written in just one place, just one file. Too messy, right? How does the code written inside
+            a module run? Before executing the code written inside a module.e ways to add something to the module.exports object to be exported. Let's discuss these methods one by one.
+        </p>
+
+        <div>
+            <button type="button" id="like-button" style="font-size: 15px;" onclick="onTapLikeButton()">
+                <span style="margin-right: 10px;"><i class="fa fa-thumbs-up"></i></span>
+                Like
+            </button>
+            <br><br>
+            <p id="likecount-label">Be the first one to like this!</p>
+        </div>
+
+        <div class="comment-view">
+            <textarea id="user-comments" cols="30" rows="8" placeholder="Leave a comment.."></textarea><br>
+            <button type="button " id="comment-button" style="font-size: 15px; " onclick="onTapComment()">Comment
+            </button>
+        </div>
+
+        <div>
+            <h3 style="font-family: sans-serif; font-size: 25px; font-weight: bold; ">All comments</h3>
+        </div>
+
+        <div id="comment-list">
+        </div>
+    </div>
+
+
+    <!--Sign up modal-->
+    <div id="signup-modal" class="modal-background ">
+        <form class="modal-form ">
+            <div class="modal-container ">
+                <div class="form-header ">
+                    <label class="form-title ">Get Started</label>
+                    <i class="fa fa-times " aria-hidden="true " onclick="document.getElementById( 'signup-modal').style.display='none' " style="margin-top: 0px; padding: 1.5%; font-size: 25px; color: darkgray; cursor: pointer; "></i>
+                </div>
+                <div class="form-seperator "></div>
+                <label>Name</label>
+                <input type="text " placeholder="Enter your name " required/>
+                <label>Username</label>
+                <input type="text " placeholder="Enter your username " required/>
+                <label>Password</label>
+                <input type="password " placeholder="Enter your password " required/>
+                <label>Confirm Password</label>
+                <input type="password " placeholder="Re-enter your password " required/>
+                <button class="modalform-button ">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <!--Post creation ends here-->
+
+    <!--Sign in modal-->
+    <div id="signin-modal" class="modal-background ">
+        <form class="modal-form ">
+            <div class="modal-container ">
+                <div class="form-header ">
+                    <label class="form-title ">Welcome Back!</label>
+                    <i class="fa fa-times " aria-hidden="true " onclick="document.getElementById( 'signin-modal').style.display='none' " style="margin-top: 0px; padding: 1.5%; font-size: 25px; color: darkgray; cursor: pointer; "></i>
+                </div>
+                <div class="form-seperator "></div>
+                <label>Username</label>
+                <input type="text " placeholder="Enter your username " required/>
+                <label>Password</label>
+                <input type="password " placeholder="Enter your password " required/>
+                <button class="modalform-button ">Sign In</button>
+                <p style="font-size: 15px; font-weight: 100px; font-family: sans-serif; text-align: center; ">Not a member ? <a onclick="navigateToSignUp() " style="color: blue; cursor: pointer; ">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="../scripts/common.js "></script>
+    <script src="../scripts/post.js "></script>
+</body>
+
+</html>
